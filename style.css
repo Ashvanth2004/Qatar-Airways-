@@ -1,0 +1,365 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #241721;
+    background: #f4f1f3;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+#fullbody {
+    min-height: 100vh;
+}
+
+#top {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    min-height: 78px;
+    padding: 12px 48px;
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 1px 14px rgba(32, 20, 28, 0.12);
+}
+
+#top0 {
+    width: 168px;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+#top0 img {
+    width: 100%;
+    display: block;
+}
+
+#top1,
+#top2 {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    color: #4a3440;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+#top1 {
+    flex: 1;
+}
+
+#top2 {
+    justify-content: flex-end;
+}
+
+#top a:hover {
+    color: #6b123d;
+}
+
+.signup {
+    padding: 10px 16px;
+    border-radius: 4px;
+    color: #ffffff;
+    background: #5c0f36;
+}
+
+#mid1 {
+    min-height: 610px;
+    padding: 96px 48px 170px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    background:
+        linear-gradient(90deg, rgba(24, 7, 18, 0.78) 0%, rgba(24, 7, 18, 0.42) 44%, rgba(24, 7, 18, 0.08) 100%),
+        url("img/mainlondon.jpg") center / cover no-repeat;
+}
+
+#mid1-1 {
+    width: min(620px, 100%);
+}
+
+.eyebrow {
+    display: block;
+    margin-bottom: 14px;
+    color: #f4d8e6;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+#mid1 h1 {
+    margin: 0 0 18px;
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.02;
+    letter-spacing: 0;
+}
+
+#mid1 p {
+    margin: 0 0 30px;
+    max-width: 540px;
+    font-size: 21px;
+    line-height: 1.45;
+}
+
+.book-now,
+.flight-form button,
+.main-plan a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 24px;
+    border: 0;
+    border-radius: 4px;
+    color: #ffffff;
+    background: #6b123d;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#bot {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 0 48px;
+    margin-top: -95px;
+}
+
+.booking-card {
+    width: min(1140px, 100%);
+    margin: 0 auto;
+    padding: 0 28px 28px;
+    color: #241721;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 24px 70px rgba(42, 22, 34, 0.24);
+}
+
+.booking-tabs {
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid #ece5e9;
+}
+
+.booking-tabs button {
+    min-height: 58px;
+    padding: 0 18px;
+    border: 0;
+    border-bottom: 3px solid transparent;
+    color: #66505c;
+    background: transparent;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.booking-tabs .active {
+    color: #6b123d;
+    border-bottom-color: #6b123d;
+}
+
+.trip-types {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 22px 0;
+    color: #4c3944;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.trip-types label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.flight-form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) auto;
+    gap: 14px;
+    align-items: end;
+}
+
+.flight-form label {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.flight-form span {
+    color: #73616b;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.flight-form input {
+    width: 100%;
+    min-height: 54px;
+    padding: 0 14px;
+    border: 1px solid #d9cbd2;
+    border-radius: 4px;
+    color: #241721;
+    background: #ffffff;
+}
+
+.flight-form button {
+    min-height: 54px;
+    white-space: nowrap;
+}
+
+.planning {
+    width: min(1140px, calc(100% - 96px));
+    margin: 34px auto 56px;
+    display: grid;
+    grid-template-columns: 1.35fr 1fr 1fr;
+    gap: 18px;
+}
+
+.planning-card {
+    min-height: 178px;
+    padding: 24px;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 12px 32px rgba(42, 22, 34, 0.1);
+}
+
+.planning-card span {
+    color: #6b123d;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.planning-card h2 {
+    margin: 12px 0 10px;
+    color: #2a1823;
+    font-size: 23px;
+    line-height: 1.2;
+}
+
+.planning-card p {
+    margin: 0;
+    color: #685560;
+    line-height: 1.45;
+}
+
+.main-plan {
+    color: #ffffff;
+    background: linear-gradient(135deg, #5c0f36, #8c315c);
+}
+
+.main-plan span,
+.main-plan h2,
+.main-plan p {
+    color: #ffffff;
+}
+
+.main-plan p {
+    margin-bottom: 20px;
+}
+
+.main-plan a {
+    background: #ffffff;
+    color: #5c0f36;
+}
+
+@media (max-width: 1050px) {
+    #top {
+        padding: 14px 28px;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    #top1,
+    #top2 {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 16px 22px;
+    }
+
+    .flight-form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .flight-form button {
+        grid-column: 1 / -1;
+    }
+
+    .planning {
+        width: min(1140px, calc(100% - 56px));
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    #top {
+        padding: 14px 18px;
+    }
+
+    #top0 {
+        width: 142px;
+    }
+
+    #top1,
+    #top2 {
+        font-size: 14px;
+    }
+
+    .signup {
+        padding: 8px 12px;
+    }
+
+    #mid1 {
+        min-height: 560px;
+        padding: 58px 18px 145px;
+        background-position: center;
+    }
+
+    #mid1 p {
+        font-size: 18px;
+    }
+
+    #bot {
+        padding: 0 18px;
+        margin-top: -112px;
+    }
+
+    .booking-card {
+        padding: 0 16px 18px;
+    }
+
+    .booking-tabs {
+        overflow-x: auto;
+    }
+
+    .booking-tabs button {
+        flex: 0 0 auto;
+        min-height: 54px;
+    }
+
+    .flight-form {
+        grid-template-columns: 1fr;
+    }
+
+    .planning {
+        width: calc(100% - 36px);
+        margin: 24px auto 36px;
+    }
+}
