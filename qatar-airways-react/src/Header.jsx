@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from './AuthContext.jsx';
 
-const logoUrl = 'https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Qatar_Airways_Logo.svg/320px-Qatar_Airways_Logo.svg.png';
+const logoUrl = 'https://www.qatarairways.com/content/dam/qatar-airways/common/logo/QA-Logo-Gold.png';
 
 const navLinks = [
   { label: 'Destinations', path: '/destinations' },

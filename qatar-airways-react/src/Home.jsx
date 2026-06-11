@@ -433,7 +433,7 @@ export default function Home() {
         <div className="footer__inner">
           <div className="footer__grid">
             <div className="footer__brand">
-              <img className="footer__brand-logo" src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Qatar_Airways_Logo.svg/320px-Qatar_Airways_Logo.svg.png" alt="Qatar Airways" />
+              <img className="footer__brand-logo" src="https://www.qatarairways.com/content/dam/qatar-airways/common/logo/QA-Logo-Gold.png" alt="Qatar Airways" />
               <p>
                 Qatar Airways is the national carrier of the State of Qatar. 
                 We fly to over 160 destinations worldwide, connecting people 
