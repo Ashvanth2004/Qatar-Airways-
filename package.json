@@ -1,32 +1,10 @@
 {
   "name": "qatar-airways",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "dev": "cd qatar-airways-react && npx vite",
-    "build": "cd qatar-airways-react && npx vite build",
-    "preview": "cd qatar-airways-react && npx vite preview",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Ashvanth2004/Qatar-Airways-.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/Ashvanth2004/Qatar-Airways-/issues"
-  },
-  "homepage": "https://github.com/Ashvanth2004/Qatar-Airways-#readme",
-  "dependencies": {
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^6.0.2",
-    "vite": "^8.0.16"
+    "dev": "cd qatar-airways-react && npm run dev",
+    "build": "cd qatar-airways-react && npm run build",
+    "preview": "cd qatar-airways-react && npm run preview"
   }
 }
