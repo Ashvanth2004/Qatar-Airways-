@@ -349,7 +349,7 @@ export default function Home() {
           <div className="features__grid">
             {features.map((feat, i) => (
               <div className="features__card features__card--with-img" key={i}>
-                <div className="features__card-bg" style={{ backgroundImage: `url(${featureImgs[i]})` }} />
+                <img className="features__card-img" src={featureImgs[i]} alt={feat.title} />
                 <div className="features__card-overlay" />
                 <div className="features__card-content">
                   <div className="features__card-icon">{feat.icon}</div>
@@ -416,7 +416,7 @@ export default function Home() {
                 </div>
                 <p className="testimonial-card__text">"{t.text}"</p>
                 <div className="testimonial-card__author">
-                  <div className="testimonial-card__avatar">{t.initials}</div>
+                  <img className="testimonial-card__avatar-img" src={testimonialImgs[i]} alt={t.name} />
                   <div>
                     <div className="testimonial-card__name">{t.name}</div>
                     <div className="testimonial-card__detail">{t.detail}</div>
