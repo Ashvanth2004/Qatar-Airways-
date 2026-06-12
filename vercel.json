@@ -1,8 +1,9 @@
 {
-  "installCommand": "cd qatar-airways-react && npm install",
-  "buildCommand": "cd qatar-airways-react && npm run build",
-  "outputDirectory": "qatar-airways-react/dist",
   "framework": "vite",
+  "rootDirectory": "qatar-airways-react",
+  "installCommand": "npm install",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
   "rewrites": [
     {
       "source": "/(.*)",
