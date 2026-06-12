@@ -11,8 +11,7 @@
     "format": "prettier --write \"src/**/*.{js,jsx,css}\"",
     "test": "vitest",
     "test:coverage": "vitest --coverage",
-    "test:e2e": "cypress run",
-    "prepare": "husky install"
+    "test:e2e": "cypress run"
   },
   "dependencies": {
     "react": "^18.2.0",
