@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "cd qatar-airways-react && npm run dev",
-    "build": "cd qatar-airways-react && npm run build",
+    "build": "cd qatar-airways-react && npm install && npm run build",
     "preview": "cd qatar-airways-react && npm run preview"
   }
 }

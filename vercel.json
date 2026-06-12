@@ -2,6 +2,7 @@
   "framework": "vite",
   "rootDirectory": "qatar-airways-react",
   "outputDirectory": "dist",
+  "buildCommand": "npm run build",
   "rewrites": [
     {
       "source": "/(.*)",
