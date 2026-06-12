@@ -24,19 +24,22 @@ public class BookingService {
         Flight flight = flightRepository.findById(flightId)
             .orElseThrow(() -> new RuntimeException("Flight not found: " + flightId));
 
-        if (flight.getAvailableSeats() < passengers) {
+        int availableSeats = flight.getAvailableSeats() != null ? flight.getAvailableSeats() : 0;
+        if (availableSeats < passengers) {
             throw new RuntimeException("Not enough available seats. Requested: " +
-                passengers + ", Available: " + flight.getAvailableSeats());
+                passengers + ", Available: " + availableSeats);
         }
+
+        java.math.BigDecimal price = flight.getPrice() != null ? flight.getPrice() : java.math.BigDecimal.ZERO;
 
         Booking booking = new Booking();
         booking.setUser(user);
         booking.setFlight(flight);
         booking.setPassengerCount(passengers);
-        booking.setTotalPrice(flight.getPrice().multiply(java.math.BigDecimal.valueOf(passengers)));
+        booking.setTotalPrice(price.multiply(java.math.BigDecimal.valueOf(passengers)));
         booking.setStatus("confirmed");
 
-        flight.setAvailableSeats(flight.getAvailableSeats() - passengers);
+        flight.setAvailableSeats(availableSeats - passengers);
         flightRepository.save(flight);
 
         return bookingRepository.save(booking);
@@ -62,7 +65,8 @@ public class BookingService {
         booking.setStatus("cancelled");
 
         Flight flight = booking.getFlight();
-        flight.setAvailableSeats(flight.getAvailableSeats() + booking.getPassengerCount());
+        int currentSeats = flight.getAvailableSeats() != null ? flight.getAvailableSeats() : 0;
+        flight.setAvailableSeats(currentSeats + booking.getPassengerCount());
         flightRepository.save(flight);
 
         return bookingRepository.save(booking);
