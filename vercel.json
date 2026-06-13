@@ -1,6 +1,5 @@
 {
   "framework": "vite",
-  "rootDirectory": "qatar-airways-react",
   "outputDirectory": "dist",
   "rewrites": [
     {
